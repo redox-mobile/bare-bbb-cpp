@@ -8,7 +8,8 @@ init:
 	@qbs config --unset profiles.am335x
 
 prepare:
-	@./configure
+	@qbs config --unset profiles.am335x
+	@qbs config profiles.am335x.qbs.toolchain "am335x-gcc"
 
 release:
 	@qbs profile:am335x config:release

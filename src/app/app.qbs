@@ -1,7 +1,7 @@
 import qbs
 
 BareApp {
-    name: "bmbbb-" + project.versionMajor + "." + project.versionMinor + "." + project.versionRelease
+    name: "bare-bbb-cpp-" + project.versionMajor + "." + project.versionMinor + "." + project.versionRelease
 
     Depends { name: "base" }
     Depends { name: "starterware" }

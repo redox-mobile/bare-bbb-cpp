@@ -1,6 +1,6 @@
-# Bare Metal Application for BeagleBone Black
+# Bare Metal C++ Application for BeagleBone Black
 
-This is an example of the bare metal application to be run on the BeagleBone Black board.
+This is an example of the bare metal C++ application to be run on the BeagleBone Black board.
 
 # Building
 
@@ -24,7 +24,7 @@ This is an example of the bare metal application to be run on the BeagleBone Bla
 * Setup QBS:
 
     ```bash
-    ./configure
+    make prepare
     ```
 
 * Run `make`:
@@ -64,13 +64,13 @@ It consists of two parts: the first-stage bootloader (MLO) and the second-stage 
 http://rcn-ee.com/repos/bootloader/am335x_boneblack/
 
 ```bash
-wget https://rcn-ee.com/repos/bootloader/am335x_boneblack/MLO-am335x_boneblack-v2019.04-r16
-wget https://rcn-ee.com/repos/bootloader/am335x_boneblack/u-boot-am335x_boneblack-v2019.04-r16.img
-mv MLO-am335x_boneblack-v2019.04-r16 MLO
-mv u-boot-am335x_boneblack-v2019.04-r16.img u-boot.img
+wget https://rcn-ee.com/repos/bootloader/am335x_boneblack/MLO-am335x_boneblack-v2019.04-r16 -O MLO
+wget https://rcn-ee.com/repos/bootloader/am335x_boneblack/u-boot-am335x_boneblack-v2019.04-r16.img -O u-boot.img
 ```
 
 Then copy `MLO` and `u-boot.img` to the SD-card.
+
+See the mirror of these files in the `bin` directory inside this repo.
 
 ## Run the Example
 
